@@ -99,7 +99,16 @@ describe("Hero", function(){
     hero.addQuest(quest2);
     var expected = [quest3, quest2];
     assert.deepEqual(expected, hero.viewCompletedQuests());
+  })
 
+  it("can view incomplete quests", function(){
+    quest2.completeQuest();
+    quest3.completeQuest();
+    hero.addQuest(quest1);
+    hero.addQuest(quest3);
+    hero.addQuest(quest2);
+    var expected = [quest1];
+    assert.deepEqual(expected, hero.viewIncompletedQuests());
   })
 
 })

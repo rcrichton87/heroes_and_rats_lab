@@ -48,6 +48,14 @@ Hero.prototype = {
     })
     return completedQuests
     
+  },
+
+  viewIncompletedQuests: function(){
+    var incompletedQuests = this.quests.filter(function(quest){
+      return quest.complete !== true;
+    })
+    return incompletedQuests
+    
   }
 
 
