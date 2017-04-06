@@ -5,7 +5,11 @@ var Hero = function(name, faveFood){
   this.quests = [];
 }
 
-
+Hero.prototype = {
+  talk: function(){
+    return "My name is " + this.name;
+  }
+}
 
 
 module.exports = Hero;

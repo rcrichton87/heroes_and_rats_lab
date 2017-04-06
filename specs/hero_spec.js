@@ -25,4 +25,8 @@ describe("Hero", function(){
     assert.strictEqual(0, hero.quests.length);
   })
 
+  it("can talk", function(){
+    assert.strictEqual("My name is Link", hero.talk());
+  })
+
 })
