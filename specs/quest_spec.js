@@ -13,8 +13,12 @@ describe("Quest", function(){
     assert.strictEqual(2, quest.difficulty);
   })
 
+  it("has an urgency", function(){
+    assert.strictEqual(4, quest.urgency);
+  })
 
-it("has an urgency", function(){
-  assert.strictEqual(4, quest.urgency);
-})
+  it("has a reward", function(){
+    assert.strictEqual(1000, quest.reward);
+  })
+
 })
