@@ -25,4 +25,9 @@ describe("Quest", function(){
     assert.strictEqual(false, quest.complete);
   })
 
+  it("can complete quest", function(){
+    quest.completeQuest();
+    assert.strictEqual(true, quest.complete);
+  })
+
 })
