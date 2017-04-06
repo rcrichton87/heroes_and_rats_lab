@@ -80,4 +80,15 @@ describe("Hero", function(){
     assert.deepEqual(expected, hero.quests);
   })
 
+  it("can sort quests by reward", function(){
+    hero.addQuest(quest1);
+    hero.addQuest(quest3);
+    hero.addQuest(quest2);
+
+    var expected = [quest1, quest2, quest3];
+    hero.sortQuests("reward");
+
+    assert.deepEqual(expected, hero.quests);
+  })
+
 })
