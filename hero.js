@@ -25,9 +25,18 @@ Hero.prototype = {
   sortQuests: function(sortBy){
     if(sortBy === "difficulty"){
       this.quests.sort(function (a, b){
-        return a.difficulty - b.difficulty
+        return a.difficulty - b.difficulty;
       })
-    
+    }
+    else if(sortBy === "urgency"){
+      this.quests.sort(function (a, b){
+        return a.urgency - b.urgency;
+      })
+    }
+    else if (sortBy === "reward"){
+      this.quests.sort(function (a, b){
+        return a.reward - b.reward;
+      })
     }
   
   }
