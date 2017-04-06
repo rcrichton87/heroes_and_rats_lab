@@ -58,4 +58,17 @@ describe("Hero", function(){
     assert.strictEqual(1, hero.quests.length);
   })
 
+  it("can sort quests by difficulty", function(){
+    hero.addQuest(quest1);
+    hero.addQuest(quest3);
+    hero.addQuest(quest2);
+
+    var expected = [quest1, quest2, quest3];
+    hero.sortQuests("difficulty");
+
+    assert.deepEqual(expected, hero.quests);
+
+
+  })
+
 })

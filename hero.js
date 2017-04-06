@@ -20,7 +20,18 @@ Hero.prototype = {
 
   addQuest: function(quest){
     this.quests.push(quest);
+  },
+
+  sortQuests: function(sortBy){
+    if(sortBy === "difficulty"){
+      this.quests.sort(function (a, b){
+        return a.difficulty - b.difficulty
+      })
+    
+    }
+  
   }
+
 }
 
 
