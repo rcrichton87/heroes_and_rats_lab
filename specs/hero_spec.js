@@ -53,4 +53,9 @@ describe("Hero", function(){
     assert.strictEqual(95, hero.health);
   })
 
+  it("can add a task", function(){
+    hero.addQuest(quest1);
+    assert.strictEqual(1, hero.quests.length);
+  })
+
 })

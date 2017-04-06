@@ -12,12 +12,14 @@ Hero.prototype = {
 
   eat: function(food){
     if (food.name === this.faveFood){
-      console.log("fave food")
       this.health += (food.regen * 1.5);
     } else {
-      console.log("other food")
       this.health += food.regen;
     }
+  },
+
+  addQuest: function(quest){
+    this.quests.push(quest);
   }
 }
 
