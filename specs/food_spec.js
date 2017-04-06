@@ -17,4 +17,11 @@ describe("Food", function(){
     assert.strictEqual(10, food.regen);
   })
 
+  it("has is not poisoned", function(){
+    assert.strictEqual(false, food.poisoned);
+  })
+
+
+
+
 })
