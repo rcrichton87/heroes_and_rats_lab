@@ -21,4 +21,8 @@ describe("Hero", function(){
     assert.strictEqual(100, hero.health);
   })
 
+  it("has no quests to start", function(){
+    assert.strictEqual(0, hero.quests.length);
+  })
+
 })
