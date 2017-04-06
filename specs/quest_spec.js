@@ -21,4 +21,8 @@ describe("Quest", function(){
     assert.strictEqual(1000, quest.reward);
   })
 
+  it("starts uncompleted", function(){
+    assert.strictEqual(false, quest.complete);
+  })
+
 })
