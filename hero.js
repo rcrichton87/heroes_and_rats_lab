@@ -1,3 +1,5 @@
+Quest = require("./quest.js")
+
 var Hero = function(name, faveFood){
   this.name = name;
   this.faveFood = faveFood;
@@ -37,9 +39,20 @@ Hero.prototype = {
       this.quests.sort(function (a, b){
         return a.reward - b.reward;
       })
-    }
-  
+    } 
+  },
+
+  viewCompletedQuests: function(){
+    var completedQuests = this.quests.filter(function(quest){
+      return quest.complete === true;
+    })
+    return completedQuests
+    
   }
+
+
+
+
 
 }
 

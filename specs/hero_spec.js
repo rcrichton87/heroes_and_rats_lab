@@ -91,4 +91,15 @@ describe("Hero", function(){
     assert.deepEqual(expected, hero.quests);
   })
 
+  it("can view complete quests", function(){
+    quest2.completeQuest();
+    quest3.completeQuest();
+    hero.addQuest(quest1);
+    hero.addQuest(quest3);
+    hero.addQuest(quest2);
+    var expected = [quest3, quest2];
+    assert.deepEqual(expected, hero.viewCompletedQuests());
+
+  })
+
 })
