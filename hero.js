@@ -8,6 +8,10 @@ var Hero = function(name, faveFood){
 Hero.prototype = {
   talk: function(){
     return "My name is " + this.name;
+  },
+
+  eat: function(food){
+    this.health += food.regen;
   }
 }
 
