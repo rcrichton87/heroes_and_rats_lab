@@ -13,4 +13,8 @@ describe("Food", function(){
     assert.strictEqual("Milk", food.name);
   })
 
+  it("has a regen value", function(){
+    assert.strictEqual(10, food.regen);
+  })
+
 })
